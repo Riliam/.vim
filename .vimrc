@@ -5,7 +5,6 @@ set nocompatible
 filetype off
 
 inoremap jk <ESC>
-inoremap kj <ESC>
 let mapleader=","
 
 syntax on
