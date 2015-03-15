@@ -4,6 +4,9 @@ filetype plugin indent on
 set nocompatible
 filetype off
 
+set noswapfile
+set clipboard=unnamedplus
+
 inoremap jk <ESC>
 inoremap kj <ESC>
 let mapleader=","
