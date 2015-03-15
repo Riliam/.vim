@@ -8,7 +8,6 @@ set noswapfile
 set clipboard=unnamedplus
 
 inoremap jk <ESC>
-inoremap kj <ESC>
 let mapleader=","
 
 syntax on
