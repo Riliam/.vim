@@ -1,0 +1,9 @@
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "bundle/auto-pairs"]
+	path = bundle/auto-paris
+	url = git://git.wincent.com/command-t.git
+[submodule "auto-pairs"]
+	path = auto-pairs
+	url = git@github.com:jiangmiao/auto-pairs.git
