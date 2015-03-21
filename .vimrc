@@ -1,3 +1,4 @@
+let g:pymode_rope = 0
 execute pathogen#infect()
 filetype plugin indent on
 
@@ -33,3 +34,4 @@ set iminsert=0
 set imsearch=0
 
 colorscheme monokai 
+set tags=~/.tags.ctags
