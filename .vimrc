@@ -9,11 +9,14 @@ set clipboard=unnamedplus
 
 inoremap jk <ESC>
 let mapleader=","
+nnoremap <c-o> A<CR><ESC>
+nnoremap <c-O> i<CR><ESC>
 
 syntax on
 set encoding=utf-8
 
 set number
+set relativenumber
 set nowrap
 "" Whitespace
 set tabstop=2 
