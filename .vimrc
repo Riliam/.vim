@@ -7,10 +7,13 @@ filetype off
 set noswapfile
 set clipboard=unnamedplus
 
-inoremap jk <ESC>
 let mapleader=","
+
+inoremap jk <ESC>
 nnoremap <c-o> A<CR><ESC>
 nnoremap <c-O> i<CR><ESC>
+nnoremap <c-j> ddp
+nnoremap <c-k> ddkP
 
 syntax on
 set encoding=utf-8
@@ -19,7 +22,7 @@ set number
 set relativenumber
 set nowrap
 "" Whitespace
-set tabstop=2 
+set tabstop=2
 set shiftwidth=2 " a tab is two spaces
 set expandtab  " use spaces, not tabs (optional)
 set backspace=indent,eol,start " backspace through everythin in insert mode
