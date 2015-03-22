@@ -7,9 +7,6 @@
 [submodule "auto-pairs"]
 	path = auto-pairs
 	url = git@github.com:jiangmiao/auto-pairs.git
-[submodule "bundle/emmet-vim"]
-	path = bundle/emmet-vim
-	url = git@github.com:mattn/emmet-vim.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
