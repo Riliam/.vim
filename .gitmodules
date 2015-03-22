@@ -22,3 +22,6 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = git@github.com:mattn/emmet-vim.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git@github.com:wincent/command-t.git

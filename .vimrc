@@ -1,6 +1,6 @@
 execute pathogen#infect()
 " (pl)ugin (up)date
-nnoremap plup :!cd ~/.vim && git submodule update --recursive<cr>
+nnoremap plup :!cd ~/.vim && git submodule sync<cr>
 filetype plugin indent on
 
 set nocompatible
