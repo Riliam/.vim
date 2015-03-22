@@ -1,4 +1,3 @@
-let g:pymode_rope = 0
 execute pathogen#infect()
 filetype plugin indent on
 
@@ -35,3 +34,14 @@ set imsearch=0
 
 colorscheme monokai 
 set tags=~/.tags.ctags
+
+"" Syntastic"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = '/home/riliam/projects/asyncio-hw/env/bin/python'
