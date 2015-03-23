@@ -13,7 +13,7 @@ let mapleader = ","
 let maplocalleader = "\\"
 
 inoremap jk <ESC>
-
+inoremap <ESC> <nop>
 
 syntax on
 set encoding=utf-8
@@ -40,6 +40,7 @@ set imsearch=0
 
 colorscheme monokai 
 set tags=~/.tags.ctags
+set colorcolumn=80
 
 "" Syntastic"
 set statusline+=%#warningmsg#
@@ -99,3 +100,19 @@ nnoremap <leader>UU viwgU
 nnoremap L A<esc> " move to the start of the current line
 " move to the start of the current line
 nnoremap H I<esc>
+
+
+" jedi-vim settings
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = "<leader>d"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
+
+let g:pymode_rope = 0
+
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+call unite#custom#source('file,file/new,buffer,file_rec,line', 'matchers', 'matcher_fuzzy')
+nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
