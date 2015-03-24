@@ -5,6 +5,7 @@ filetype plugin indent on
 
 set nocompatible
 filetype off
+set autoread
 
 set noswapfile
 set clipboard=unnamedplus
@@ -12,7 +13,8 @@ set clipboard=unnamedplus
 let mapleader = ","
 let maplocalleader = "\\"
 
-inoremap jk <ESC>
+inoremap jk <ESC> 
+
 inoremap <ESC> <nop>
 
 syntax on
@@ -65,7 +67,7 @@ let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
 
 " Shortcuts for Django translate in templates
 " t(r)anslate (l)ine under cursor
-nnoremap <leader>rl :s/"/\\"/g<CR>A" %}<esc>I{% trans "
+nnoremap <leader>rl A' %}<esc>I{% trans '<esc>
 " t(r)anslate (w)ord under cursor
 nnoremap <leader>rw bi{% trans "<esc>ea" %}
 " t(r)anslate input
@@ -73,7 +75,10 @@ nnoremap <leader>rr a{% trans "" %}<esc>F"i
 " t(r)anslate (s)election
 vnoremap <leader>rs <esc>`>a" %}<esc>`<i{% trans "<esc>
 " t(r)anslate (b)lock selection
+nnoremap <leader>ul A)<esc>I_(<esc>
 vnoremap <leader>rb >><esc>`>o{% endblocktrans %}<esc><<`<O{% blocktrans %}<esc>F%
+vnoremap <leader>us <esc>`>a)<esc>`<i_(<esc>
+
 
 
 " edit .vimrc
@@ -85,6 +90,8 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>o A<CR><ESC>
 " insert empty line before the current line
 nnoremap <leader>n I<CR><ESC>k
+" insert breakline in current position
+nnoremap <c-o> i<CR>
 
 " move line down
 nnoremap <c-j> ddp
@@ -97,9 +104,11 @@ nnoremap <leader>uu viwgu
 nnoremap <leader>UU viwgU
 
 " move to the end of the current line
-nnoremap L A<esc> " move to the start of the current line
+nnoremap L A<esc>
+nnoremap $ <nop>
 " move to the start of the current line
 nnoremap H I<esc>
+nnoremap ^ <nop>
 
 
 " jedi-vim settings
@@ -116,3 +125,11 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#custom#source('file,file/new,buffer,file_rec,line', 'matchers', 'matcher_fuzzy')
 nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
+
+" airline
+let g:airline_powerline_fonts = 1
+
+" autopep8
+
+let g:autopep8_aggressive=1
+let g:autopep8_max_line_length=79
