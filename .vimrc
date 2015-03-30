@@ -1,6 +1,4 @@
 execute pathogen#infect()
-" (pl)ugin (up)date
-nnoremap plup :!cd ~/.vim && git submodule update --remote --merge<cr>
 filetype plugin indent on
 
 set nocompatible
@@ -14,6 +12,7 @@ let mapleader = ","
 let maplocalleader = "\\"
 
 inoremap jk <ESC> 
+inoremap jjjjjjj <ESC>
 
 inoremap <ESC> <nop>
 
@@ -69,11 +68,11 @@ let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
 " t(r)anslate (l)ine under cursor
 nnoremap <leader>rl A' %}<esc>I{% trans '<esc>
 " t(r)anslate (w)ord under cursor
-nnoremap <leader>rw bi{% trans "<esc>ea" %}
+nnoremap <leader>rw bi{% trans '<esc>ea' %}
 " t(r)anslate input
-nnoremap <leader>rr a{% trans "" %}<esc>F"i
+nnoremap <leader>rr a{% trans '' %}<esc>F"i
 " t(r)anslate (s)election
-vnoremap <leader>rs <esc>`>a" %}<esc>`<i{% trans "<esc>
+vnoremap <leader>rs <esc>`>a' %}<esc>`<i{% trans '<esc>
 " t(r)anslate (b)lock selection
 nnoremap <leader>ul A)<esc>I_(<esc>
 vnoremap <leader>rb >><esc>`>o{% endblocktrans %}<esc><<`<O{% blocktrans %}<esc>F%
@@ -109,6 +108,14 @@ nnoremap $ <nop>
 " move to the start of the current line
 nnoremap H I<esc>
 nnoremap ^ <nop>
+map - :tabedit 
+map _ :tabedit<cr>:CommandT<cr>
+nnoremap <leader>fl ggO# -*- coding: utf-8 -*-<cr>from __future__ import unicode_literals, print_function, division, absolute_import  # NOQA<cr><esc>''
+noremap ` :NERDTree<cr>
+
+
+" my abbreviations and misprints correction
+iabbrev imoprt import
 
 
 " jedi-vim settings
@@ -130,6 +137,8 @@ nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 let g:airline_powerline_fonts = 1
 
 " autopep8
-
 let g:autopep8_aggressive=1
 let g:autopep8_max_line_length=79
+
+" fzf
+set rtp+=~/.fzf
