@@ -74,9 +74,13 @@ nnoremap <leader>rr a{% trans '' %}<esc>F"i
 " t(r)anslate (s)election
 vnoremap <leader>rs <esc>`>a' %}<esc>`<i{% trans '<esc>
 " t(r)anslate (b)lock selection
-nnoremap <leader>ul A)<esc>I_(<esc>
 vnoremap <leader>rb >><esc>`>o{% endblocktrans %}<esc><<`<O{% blocktrans %}<esc>F%
+
+nnoremap <leader>ul A)<esc>I_(<esc>
 vnoremap <leader>us <esc>`>a)<esc>`<i_(<esc>
+nmap <leader>uq va'S)i_jk
+
+nnoremap <leader>noqa A  # NOQA<esc>
 
 
 
@@ -135,6 +139,7 @@ nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 
 " airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#syntastic#enabled = 1
 
 " autopep8
 let g:autopep8_aggressive=1
