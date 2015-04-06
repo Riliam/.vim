@@ -135,7 +135,7 @@ let g:pymode_rope = 0
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#custom#source('file,file/new,buffer,file_rec,line', 'matchers', 'matcher_fuzzy')
-nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
+nnoremap <C-f> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 
 " airline
 let g:airline_powerline_fonts = 1
