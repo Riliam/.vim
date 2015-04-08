@@ -140,6 +140,7 @@ nnoremap <C-f> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 " airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#syntastic#enabled = 1
+set laststatus=2
 
 " autopep8
 let g:autopep8_aggressive=1
