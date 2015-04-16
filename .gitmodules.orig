@@ -43,9 +43,12 @@
 [submodule "bundle/html5.vim"]
 	path = bundle/html5.vim
 	url = https://github.com/othree/html5.vim.git
+<<<<<<< HEAD
 [submodule "bundle/django.vim"]
 	path = bundle/django.vim
 	url = https://github.com/vim-scripts/django.vim.git
+=======
 [submodule "pgsql.vim"]
 	path = pgsql.vim
 	url = https://github.com/exu/pgsql.vim.git
+>>>>>>> 17e0e90b7ee4f4d04b519552153d2a80705e5fdd
