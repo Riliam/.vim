@@ -46,6 +46,3 @@
 [submodule "bundle/django.vim"]
 	path = bundle/django.vim
 	url = https://github.com/vim-scripts/django.vim.git
-[submodule "pgsql.vim"]
-	path = pgsql.vim
-	url = https://github.com/exu/pgsql.vim.git
