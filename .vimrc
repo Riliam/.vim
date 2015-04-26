@@ -120,6 +120,7 @@ noremap ` :NERDTree<cr>
 
 " my abbreviations and misprints correction
 iabbrev imoprt import
+iabbrev djanog django
 
 
 " jedi-vim settings
