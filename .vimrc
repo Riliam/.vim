@@ -145,5 +145,5 @@ let g:autopep8_max_line_length=79
 set rtp+=~/.fzf
 
 " Syntastic
-let g:syntastic_html_tidy_exec = 'tidy5'
-let g:syntastic_htmldjango_checkers = ['tidy5']
+" let g:syntastic_html_tidy_exec = 'tidy5'
+" let g:syntastic_htmldjango_checkers = ['tidy5']
