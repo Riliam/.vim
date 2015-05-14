@@ -11,7 +11,7 @@ set clipboard=unnamedplus
 let mapleader = ","
 let maplocalleader = "\\"
 
-inoremap jk <ESC> 
+inoremap jk <ESC>
 inoremap jjjjjjj <ESC>
 
 inoremap <ESC> <nop>
@@ -39,7 +39,7 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 
-colorscheme monokai 
+colorscheme monokai
 set tags=~/.tags.ctags
 set colorcolumn=80
 
@@ -54,7 +54,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_python_exec = '/usr/bin/python'
 
-" Surround 
+" Surround
 " Django template surrounds let b:surround_{char2nr("v")} = "{{ \r }}"
 let b:surround_{char2nr("{")} = "{{ \r }}"
 let b:surround_{char2nr("%")} = "{% \r %}"
@@ -107,15 +107,18 @@ nnoremap <leader>uu viwgu
 nnoremap <leader>UU viwgU
 
 " move to the end of the current line
-nnoremap L A<esc>
-nnoremap $ <nop>
+noremap L $
+noremap $ <nop>
 " move to the start of the current line
-nnoremap H I<esc>
-nnoremap ^ <nop>
-map - :tabedit 
+noremap H ^
+noremap ^ <nop>
+map - :tabedit
 map _ :tabedit<cr>:CommandT<cr>
 nnoremap <leader>fl ggO# -*- coding: utf-8 -*-<cr>from __future__ import unicode_literals, print_function, division, absolute_import  # NOQA<cr><esc>''
 noremap ` :NERDTree<cr>
+
+" (r)emove (t)railing (s)paces and save
+nnoremap <leader>rts :%s/\s\+$//<cr>:w<cr>
 
 
 " my abbreviations and misprints correction
@@ -145,6 +148,4 @@ let g:autopep8_max_line_length=79
 " fzf
 set rtp+=~/.fzf
 
-" Syntastic
-" let g:syntastic_html_tidy_exec = 'tidy5'
-" let g:syntastic_htmldjango_checkers = ['tidy5']
+so ~/.vim/bundle/vim-addon-linux-coding-style/plugin/linuxsty.vim
